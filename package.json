@@ -1,7 +1,7 @@
 {
 	"name": "async-iter-robot3",
 	"version": "1.0.0",
-	"description": "",
+	"description": "robot3 interpretter as an asynchronous iterable",
 	"main": "async-iter-robot3.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
