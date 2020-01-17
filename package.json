@@ -1,0 +1,23 @@
+{
+	"name": "async-iter-robot3",
+	"version": "1.0.0",
+	"description": "",
+	"main": "async-iter-robot3.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://archive.voodoowarez.com/async-iter-robot3"
+	},
+	"keywords": [],
+	"author": "jauntywunderkind",
+	"license": "MIT",
+	"module": "async-iter-robot3.js",
+	"esm": true,
+	"type": "module",
+	"dependencies": {
+		"async-iter-pipe": "^1.0.3",
+		"robot3": "^0.2.9"
+	}
+}
