@@ -17,3 +17,21 @@ tape( "synchronous walk of traffic light", async function( t){
 	t.equal( light.current, "red", "red")
 	t.end()
 })
+
+tape( "async walk of traffic light", async function( t){
+	const
+		light= new Robot3( trafficLight),
+		expect= [ "yellow", "red", "green"],
+		reader= (async function(){
+			for await( let l of light){
+				const e= expect.shift()
+				t.equal( l, e, e)
+			}
+		})()
+	light.send( "step")
+	await Immediate()
+	light.send( "step")
+	await Immediate()
+	t.equal( expect.length, 0, "saw all")
+	t.end()
+})
