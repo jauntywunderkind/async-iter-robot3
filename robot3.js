@@ -30,7 +30,7 @@ AsyncIterRobot3.prototype= Object.create( Pipe.prototype, {
 	_onChangeListener: {
 		value: function(){
 			// push ourself as a new iteration
-			return this.push( this.current)
+			return this.push([ this, this.current])
 		}
 	},
 	machine: {

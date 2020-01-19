@@ -23,9 +23,9 @@ tape( "async walk of traffic light", async function( t){
 		light= new Robot3( trafficLight),
 		expect= [ "yellow", "red", "green"],
 		reader= (async function(){
-			for await( let l of light){
+			for await( let [ ctx, current] of light){
 				const e= expect.shift()
-				t.equal( l, e, e)
+				t.equal( current, e, e)
 			}
 		})()
 	light.send( "step")
