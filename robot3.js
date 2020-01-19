@@ -1,11 +1,11 @@
 import Pipe from "async-iter-pipe/pipe.js"
-import { interpret } from "robot3"
+import { interpret } from "robot3/machine.js"
 
 const
-	Machine= Symbol.for("async-iter-robot:machine")
+	Machine= Symbol.for("async-iter-robot:machine"),
 	Service= Symbol.for("async-iter-robot:service")
 
-export function AsyncIterRobot( machine, opt){
+export function AsyncIterRobot3( machine, opt){
 	if( machine.machine&& opt=== undefined){
 		opt= machine
 		machine= opt.machine
@@ -21,12 +21,12 @@ export function AsyncIterRobot( machine, opt){
 	return this
 }
 export {
-	AsyncIterRobot as default,
-	AsyncIterRobot as asyncIterRobot,
-	AsyncIterRobot as robot,
-	AsyncIterRobot as Robot
+	AsyncIterRobot3 as default,
+	AsyncIterRobot3 as asyncIterRobot3,
+	AsyncIterRobot3 as robot,
+	AsyncIterRobot3 as Robot
 }
-AsyncIterRobot.prototype= Object.create( AsyncIterPipe.prototype, {
+AsyncIterRobot3.prototype= Object.create( Pipe.prototype, {
 	_onChangeListener: {
 		value: function(){
 			// push ourself as a new iteration
@@ -61,4 +61,4 @@ AsyncIterRobot.prototype= Object.create( AsyncIterPipe.prototype, {
 		}
 	}
 })
-AsyncIterRobot.prototype.constructor= AsyncIterRobot
+AsyncIterRobot3.prototype.constructor= AsyncIterRobot3
