@@ -56,8 +56,8 @@ AsyncIterRobot3.prototype= Object.create( Pipe.prototype, {
 		}
 	},
 	send: {
-		get: function(){
-			return this.service.send
+		value: function( value){
+			return this.service.send( value)
 		}
 	}
 })
