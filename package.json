@@ -2,7 +2,7 @@
 	"name": "async-iter-robot3",
 	"version": "1.0.0",
 	"description": "robot3 interpretter as an asynchronous iterable",
-	"main": "async-iter-robot3.js",
+	"main": "robot3.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -13,7 +13,7 @@
 	"keywords": [],
 	"author": "jauntywunderkind",
 	"license": "MIT",
-	"module": "async-iter-robot3.js",
+	"module": "robot3.js",
 	"esm": true,
 	"type": "module",
 	"dependencies": {
